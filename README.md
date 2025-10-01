@@ -93,6 +93,70 @@ counter-app/
 └── README.md
 
 ---
+## 🏗️ Arhitektura sistema
+```mermaid
+graph TB
+    subgraph User
+        A[Browser]
+    end
+    
+    subgraph Frontend
+        B[Counter Component]
+        C[Increment Button]
+        D[Decrement Button]
+        E[Reset Button]
+    end
+    
+    subgraph Backend
+        F[FastAPI]
+        G[Counter Routes]
+        H[GET /api/count]
+        I[POST /api/increment]
+        J[POST /api/decrement]
+        K[POST /api/reset]
+    end
+    
+    subgraph Database
+        L[(PostgreSQL)]
+    end
+    
+    subgraph Infrastructure
+        M[Docker]
+        N[Kubernetes]
+    end
+    
+    A -->|User clicks| B
+    B --> C
+    B --> D
+    B --> E
+    
+    C -->|HTTP POST| I
+    D -->|HTTP POST| J
+    E -->|HTTP POST| K
+    B -->|HTTP GET| H
+    
+    I --> G
+    J --> G
+    K --> G
+    H --> G
+    
+    G -->|SQL Query| L
+    L -->|Data| G
+    G -->|JSON Response| B
+    B -->|Update UI| A
+    
+    M -.->|Containerize| F
+    M -.->|Containerize| B
+    M -.->|Containerize| L
+    N -.->|Orchestrate| M
+    
+    style A fill:#e1f5ff
+    style B fill:#fff4e1
+    style L fill:#e8f5e9
+    style F fill:#ffe1e1
+    style M fill:#f3e5f5
+    style N fill:#f3e5f5
+```
 
 ## Deployment flow
 
