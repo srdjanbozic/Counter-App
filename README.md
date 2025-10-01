@@ -32,12 +32,13 @@ Jednostavna full-stack aplikacija (React + FastAPI) sa Docker i Kubernetes deplo
 - Setup projekta (Git repo, folder struktura)
 - FastAPI backend sa osnovnim endpoints-ima
 - React frontend sa UI za brojač
-- Lokalno testiranje sa docker-compose
+- Povezivanje backenda i frontenda lokalno
+
 
 ### **Dan 3-4: Dockerizacija**
 - Dockerfile za backend, frontend i PostgreSQL
 - docker-compose.yml za celu aplikaciju
-- Testiranje kontejnerizovane aplikacije
+- Testiranje kontejnerizovane aplikacije lokalno
 
 ### **Dan 5-6: Kubernetes (YAML)**
 - Kubernetes manifests (Deployments, Services, PVCs, Secrets)
