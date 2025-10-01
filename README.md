@@ -1,13 +1,11 @@
 # Counter App – DevOps Practice Project
-# 🧮 Counter App – DevOps Practice Project
 
 Jednostavna full-stack aplikacija (React + FastAPI) sa Docker i Kubernetes deployment-om.  
-**Trajanje:** 7 dana
-
 ---
 
-## 📌 Funkcionalnost
+## Funkcionalnost
 
+- Prikaz vrednosti brojača
 - Dugme za povećanje brojača (+1)
 - Dugme za smanjenje brojača (-1)
 - Dugme za reset (0)
@@ -16,7 +14,7 @@ Jednostavna full-stack aplikacija (React + FastAPI) sa Docker i Kubernetes deplo
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** React + Vite
 - **Backend:** FastAPI (Python)
@@ -28,7 +26,7 @@ Jednostavna full-stack aplikacija (React + FastAPI) sa Docker i Kubernetes deplo
 
 ---
 
-## 🗓️ Plan rada (7 dana)
+## Plan rada (7 dana)
 
 ### **Dan 1-2: Aplikacija**
 - Setup projekta (Git repo, folder struktura)
@@ -47,13 +45,14 @@ Jednostavna full-stack aplikacija (React + FastAPI) sa Docker i Kubernetes deplo
 - Testiranje i debugging
 
 ### **Dan 7: Finalizacija**
+- Terraform implementacija
 - Dokumentacija
 - End-to-end testovi
 - Demo
 
 ---
 
-## 📂 Struktura projekta
+## Struktura projekta
 
 
 counter-app/
@@ -95,7 +94,7 @@ counter-app/
 
 ---
 
-## 🚀 Deployment flow
+## Deployment flow
 
 1. **Lokalno:** docker-compose up
 2. **Minikube:** kubectl apply -f k8s/
@@ -103,7 +102,7 @@ counter-app/
 
 ---
 
-## 📊 API Endpoints
+## API Endpoints
 
 - `GET /api/count` - vrati brojač
 - `POST /api/increment` - +1
@@ -113,12 +112,12 @@ counter-app/
 
 ---
 
-## ✅ Success criteria
+## Success criteria
 
-- ✅ Aplikacija radi lokalno (docker-compose)
-- ✅ Uspešan deployment na Minikube
-- ✅ Brojač persistuje podatke (PostgreSQL)
-- ✅ Kompletna dokumentacija
-- ✅ Working demo
+- Aplikacija radi lokalno (docker-compose)
+- Uspešan deployment na Minikube
+- Brojač persistuje podatke (PostgreSQL)
+- Kompletna dokumentacija
+- Working demo
 
 ---
